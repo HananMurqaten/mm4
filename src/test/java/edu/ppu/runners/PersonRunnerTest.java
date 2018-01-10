@@ -18,6 +18,12 @@ public class PersonRunnerTest {
 		int ageCategory = cut.getAgeCategory(70);
 		assertEquals("wrong age category", 3, ageCategory);
 	}
+	@Test
+	public void testGetAgeCategory2() {
+		PersonRunner cut = new PersonRunner(null);
+		int ageCategory = cut.getAgeCategory(60);
+		assertEquals("wrong age category", 2, ageCategory);
+	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testGetAgeCategoryInvalidAge() {
